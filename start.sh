@@ -2,7 +2,7 @@
 
 function wait_emulator_to_be_ready() {
   adb devices | grep emulator | cut -f1 | while read line; do adb -s $line emu kill; done
-  emulator -avd "GOOGLE_PIXEL_EMULATOR" -verbose -no-boot-anim -no-window -gpu off &
+  emulator -avd "GOOGLE_PIXEL_EMULATOR" -verbose -no-boot-anim -no-window -gpu off -timezone America/Bogota &
   
   boot_completed=false
   while [ "$boot_completed" == false ]; do
