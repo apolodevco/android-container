@@ -63,6 +63,35 @@ Conectar agente android de jenkins con el emulador:
 https://docs.genymotion.com/paas/5.0/
 
 
+## Install fastlane
+
+Make sure to install Ruby 2.x version
+
+```bash
+sudo apt-add-repository ppa:brightbox/ruby-ng
+
+sudo apt-get update
+```
+
+Install ruby 2.4 and gem
+
+```bash
+sudo apt-get install ruby2.4
+
+sudo apt-get install ruby2.4-dev
+```
+
+Add fastlane bin
+
+```bash
+sudo gem install fastlane
+```
+
+Finally, check Fastlane been installed successfully
+
+```bash
+fastlane --version
+```
 
 ## Create android emulator inside of instance
 
