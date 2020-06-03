@@ -1,4 +1,4 @@
-FROM jenkins/slave:latest
+FROM jenkins/inbound-agent:latest
 
 LABEL maintainer "apolov@devco.com.co"
 
@@ -25,8 +25,4 @@ RUN touch /root/.android/repositories.cfg
 RUN yes Y | sdkmanager --licenses
 
 # clean up
-RUN  apt-get remove -y unzip wget && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*   
-
-USER jenkins
+RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*   
